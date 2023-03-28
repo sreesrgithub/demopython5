@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+              font-family:Calibri, Helvetica, sans-serif;
+              background: -webkit-linear-gradient(to right, #155799, #159957);
+              background: linear-gradient(to right, #155799, #159957);
+              color:whitesmoke;
+              }
+
+        h1    {
+              text-align:center;
+              }
+
+        p     {
+              text-align:center;
+              }
+
+        form  {
+              width:35rem;
+              margin: auto;
+              color:whitesmoke;
+              }
+
+        input[type=text], input[type=password]{
+              width: 100%;
+              margin: 10px 0;
+              border-radius: 5px;
+              padding: 15px 18px;
+              box-sizing: border-box;
+              }
+
+        .login {
+              background-color: #4CAF50;
+              color: white;
+              padding: 14px 20px;
+              border-radius: 5px;
+              margin: 7px 0;
+              width: 100%;
+              cursor: pointer;
+              font-size: 18px;
+              }
+
+        .login: hover {
+              opacity: 1;
+              }
+
+    </style>
+    <title>Login</title>
+</head>
+<body>
+<form action="login" method="post">
+    {% csrf_token %}
+
+<div class="container">
+<h1>Sign In</h1>
+<p>Sign in with your username and password</p>
+</div>
+
+<div class="container">
+    <br><br>
+    <label for="username"><b>Username</b></label>
+    <input type="text" name="username" placeholder="Enter your username"><br><br>
+    <label for="password"><b>Password</b></label>
+    <input type="text" name="password" placeholder="Enter password"><br><br>
+    <button type="submit" class="login"><b>Login</b></button>
+</div>
+</form>
+
+<div class="register-link">
+   <p style="color:#FFC300;"> Don't have an account? <a href="/registration">Register here</a></p>
+</div>
+
+</body>
+</html>
